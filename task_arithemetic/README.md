@@ -1,6 +1,6 @@
 # Editing Models with Task Arithmetic
 
-**We adopt the origin source and add ours Cross-Task Linearity implementation in `scripts` directory.**
+**We adopt the origin source and add our Cross-Task Linearity implementation in `scripts` directory.**
 `scripts/cross-task-linearity.py` is the main script for Cross-Task Linearity evaluation.
 
 This repository contains origin code for the ICLR 2023 paper [Editing Models with Task Arithmetic](https://arxiv.org/abs/2212.04089).
