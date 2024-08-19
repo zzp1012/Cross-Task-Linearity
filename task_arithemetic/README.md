@@ -2,6 +2,67 @@
 
 **We adopt the origin source and add our Cross-Task Linearity implementation in `scripts` directory.**
 `scripts/cross-task-linearity.py` is the main script for Cross-Task Linearity evaluation.
+Here are the scripts for Cross-Task Linearity evaluation:
+```bash
+# addition
+python cross-task-linearity.py \
+            --save_root ../outs/vit-b-32/cml_addition/MNIST \
+            --model_root $model_path \
+            --data_root $data_root \
+            --dataset MNIST \
+            --batch_size 64 \
+            --sample_num 1000 \
+            --modelA "0.8+MNIST" \
+            --modelB "0.8+Cars"
+# negation
+python cross-task-linearity.py \
+        --save_root ../outs/vit-b-32/cml_negation/MNIST \
+        --model_root $model_path \
+        --data_root $data_root \
+        --dataset MNIST \
+        --batch_size 64 \
+        --sample_num 5000 \
+        --modelA "0.4+MNIST" \
+        --modelB "0.4_Cars" 
+
+# addition_stitching
+python model_addition_stitching.py \
+        --save_root ../outs/vit-b-32/model_addition_stitching/MNIST \
+        --model_root $model_path \
+        --data_root $data_root \
+        --dataset MNIST \
+        --sample_num 1000 \
+        --modelA "0.8+MNIST"
+
+# negation_stitching
+python model_negation_stitching.py \
+        --save_root ../outs/vit-b-32/model_negation_stitching/MNIST \
+        --model_root $model_path \
+        --data_root $data_root \
+        --dataset MNIST \
+        --sample_num 5000 \
+        --modelA "0.4+MNIST"
+
+# ensemble_stitching for addition
+python model_ensemble_stitching.py \
+            --save_root ../outs/vit-b-32/ensemble_stitching/addition/MNIST+Cars \
+            --model_root $model_path \
+            --data_root $data_root \
+            --dataset MNIST \
+            --batch_size 64 \
+            --sample_num 1000 \
+            --modelA "0.8+MNIST" \
+            --modelB "0.8+Cars"
+# ensemble_stitching for negation
+python model_ensemble_stitching.py \
+        --save_root ../outs/vit-b-32/model_ensemble_stitching/negation/MNIST \
+        --model_root $model_root \
+        --data_root $data_root \
+        --dataset MNIST \
+        --sample_num 5000 \
+        --modelA "0.8_MNIST" \
+        --modelB "0.8+MNIST"
+```
 
 This repository contains origin code for the ICLR 2023 paper [Editing Models with Task Arithmetic](https://arxiv.org/abs/2212.04089).
 

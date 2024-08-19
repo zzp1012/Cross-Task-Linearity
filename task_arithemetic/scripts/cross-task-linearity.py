@@ -48,7 +48,7 @@ def get_featuremaps(device: torch.device,
     # set the layers
     layers = []
     for name, module in model.named_modules():
-        from open_clip import ResidualAttentionBlock
+        from open_clip.model import ResidualAttentionBlock
         if isinstance(module, (ResidualAttentionBlock)):
             layers.append(name)
     
