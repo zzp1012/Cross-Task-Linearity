@@ -39,9 +39,9 @@ python model_negation_stitching.py \
         --save_root ../outs/vit-b-32/model_negation_stitching/MNIST \
         --model_root $model_path \
         --data_root $data_root \
-        --dataset MNIST \
-        --sample_num 5000 \
-        --modelA "0.4+MNIST"
+        --task MNIST \
+        --sample_num 1000 \
+        --dataset MNIST
 
 # ensemble_stitching for addition
 python model_ensemble_stitching.py \
