@@ -9,7 +9,7 @@ Here are the scripts to run the Cross-Task-Linearity Evaluation:
 
 ```bash
 python cross-task-linearity.py \
-            --save_root ./outs/cml_addition/qasc \
+            --save_root ./outs/ctl_addition/qasc \
             --modelA_path "t5-base-finetuned-qasc" \
             --modelB_path "t5-base-finetuned-imdb" \
             --modelA_coef 0.8 \

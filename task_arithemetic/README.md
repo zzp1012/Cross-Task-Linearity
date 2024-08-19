@@ -6,7 +6,7 @@ Here are the scripts for Cross-Task Linearity evaluation:
 ```bash
 # addition
 python cross-task-linearity.py \
-            --save_root ../outs/vit-b-32/cml_addition/MNIST \
+            --save_root ../outs/vit-b-32/ctl_addition/MNIST \
             --model_root $model_path \
             --data_root $data_root \
             --dataset MNIST \
@@ -16,7 +16,7 @@ python cross-task-linearity.py \
             --modelB "0.8+Cars"
 # negation
 python cross-task-linearity.py \
-        --save_root ../outs/vit-b-32/cml_negation/MNIST \
+        --save_root ../outs/vit-b-32/ctl_negation/MNIST \
         --model_root $model_path \
         --data_root $data_root \
         --dataset MNIST \
